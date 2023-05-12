@@ -72,4 +72,12 @@ func calculateInterest(balance float64) float64 {
 	return interest
 }
 
+func main() {
+	// Run the tests
+	tests := []testing.InternalTest{{"TestCalculateInterest", TestCalculateInterest}}
+	match := testing.MatchTest
+	if !testing.RunTests(match, tests) {
+		panic("tests failed")
+	}
+}
 
